@@ -1,4 +1,5 @@
 import React from "react"
+import "../styles/Checkout.scss"
 import { useNavigate } from "react-router-dom"
 
 export default function Checkout({ componentOpacity, productsItems, setProductsItems }) {
@@ -7,9 +8,9 @@ export default function Checkout({ componentOpacity, productsItems, setProductsI
     const checkoutElements = productsItems.map(product => {
         if (product.amountInCart !== 0) {
             return (
-                <div key={product.itemNumber} className="checkout-container-card">
+                <div key={product.itemNumber} className="card">
                     <img src={process.env.PUBLIC_URL + product.src} alt=""></img>
-                    <div className="checkout-container-card-info">
+                    <div className="info-container">
                         <p>{product.name}</p>
                         <p>{product.price}</p>
                         <p>Items: {product.amountInCart}</p>
@@ -60,12 +61,12 @@ export default function Checkout({ componentOpacity, productsItems, setProductsI
         <div className="checkout-container" style={{opacity: componentOpacity}}>
             <h1>Your Order</h1>
             {checkoutElements}
-            <div className="checkout-container-calc">
+            <div className="calculations-container">
                 <p>Subtotal: ${subtotal.toFixed(2)}</p>
                 <p>Estimated Tax: ${estimatedTax.toFixed(2)}</p>
                 <p>Total: ${total.toFixed(2)}</p>
             </div>
-            <button className="place-order" onClick={handlePlaceOrderClick}>Place Order</button>
+            <button id="place-order-btn" onClick={handlePlaceOrderClick}>Place Order</button>
         </div>
     )
 }

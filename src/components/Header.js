@@ -1,4 +1,5 @@
 import React from "react"
+import "../styles/Header.scss"
 import { Link } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
@@ -22,18 +23,19 @@ export default function Header({setIsToggled, closeCartMenu}) {
     return (
         <div className="header-container">
             <Link
+                id="logo"
                 to="/e-commerce-site/"
                 onClick={closeCartMenu}
-            >Weston Farms</Link>
-            <div className="header-container-links">
+            >Weston Farms
+            </Link>
+            <div id="clickables-container">
                 <Link
                     to="/products"
                     onClick={closeCartMenu}
-                >Products</Link>
-                <FontAwesomeIcon className="header-container-cart" icon={faCartShopping} onClick={handleCartClick}
-                />
-                <FontAwesomeIcon className="header-container-menu" icon={faBars} onClick={handleMenuClick}
-                />
+                >Products
+                </Link>
+                <FontAwesomeIcon id="cart" icon={faCartShopping} onClick={handleCartClick}/>
+                <FontAwesomeIcon id="menu" icon={faBars} onClick={handleMenuClick}/>
             </div>
         </div>
     )

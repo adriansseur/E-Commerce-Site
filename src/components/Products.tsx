@@ -1,4 +1,5 @@
 import React from "react"
+import "../styles/Products.scss"
 import AmountSelector from "../subcomponents/AmountSelector"
 import { ProductsDataState } from "../interfaces"
 
@@ -29,9 +30,9 @@ export default function Products({ productsItems, setProductsItems, componentOpa
     // loops through productsData and builds elements
     const productsElements = productsItems.map((product: ProductsDataState) => {
         return (
-            <div key={product.itemNumber} className="products-container-card">
+            <div key={product.itemNumber} className="card">
                 <img src={process.env.PUBLIC_URL + product.src} alt=""></img>
-                <div className="products-container-card-info">
+                <div className="info-container">
                     <p>{product.name}</p>
                     <p>{product.price}</p>
                     <AmountSelector

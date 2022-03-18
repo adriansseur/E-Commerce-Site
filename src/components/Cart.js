@@ -1,4 +1,5 @@
 import React from "react"
+import "../styles/Cart.scss"
 import { Link } from "react-router-dom"
 import AmountSelector from "../subcomponents/AmountSelector"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -32,14 +33,14 @@ export default function Cart({isToggled, productsItems, setProductsItems, closeC
     let cartElements = productsItems.map(product => {
         if (product.amountInCart !== 0) {
             return (
-                <div key={product.itemNumber} className="cart-container-card">
+                <div key={product.itemNumber} className="card">
                     <FontAwesomeIcon
-                        className="cart-container-card-close"
+                        className="close-btn"
                         icon={faClose}
                         onClick={() => handleCloseClick(product.itemNumber)}
                     />
                     <img src={process.env.PUBLIC_URL + product.src}></img>
-                    <div className="cart-container-card-info">
+                    <div className="info-container">
                         <p>{product.name}</p>
                         <p>{product.price}</p>
                         <AmountSelector
@@ -61,7 +62,7 @@ export default function Cart({isToggled, productsItems, setProductsItems, closeC
             <Link
                 key="checkout button"
                 to="/checkout"
-                className="proceed-to-checkout-link"
+                id="proceed-to-checkout-link"
                 onClick={closeCartMenu}
             >Proceed to Checkout</Link>
         )

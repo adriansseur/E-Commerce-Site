@@ -1,0 +1,19 @@
+.amount-selector-container {
+    display: flex;
+    align-items: center;
+    gap: 0.25em;
+    margin-bottom: 1em;
+
+    .sign {
+        cursor: pointer;
+    }
+
+    .number-container {
+        width: 30px;
+        height: 30px;
+        border: 1px solid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

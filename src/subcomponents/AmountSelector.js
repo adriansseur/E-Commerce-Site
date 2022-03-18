@@ -1,4 +1,5 @@
 import React from "react"
+import "../styles/AmountSelector.scss"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCirclePlus } from '@fortawesome/free-solid-svg-icons'
 import { faCircleMinus } from '@fortawesome/free-solid-svg-icons'
@@ -37,13 +38,13 @@ export default function AmountSelector({product, setProductsItems, desiredAmount
 
     return (
         <div className="amount-selector-container">
-            <FontAwesomeIcon className="amount-selector-signs" icon={faCircleMinus} onClick={() =>
+            <FontAwesomeIcon className="sign" icon={faCircleMinus} onClick={() =>
                 {
                     const identifier = "minus"
                     handleSelectorClick(product.itemNumber, desiredAmount, identifier)}
                 } />
-            <div className="amount-selector-text">{product[desiredAmount]}</div>
-            <FontAwesomeIcon className="amount-selector-signs" icon={faCirclePlus} onClick={() =>
+            <div className="number-container">{product[desiredAmount]}</div>
+            <FontAwesomeIcon className="sign" icon={faCirclePlus} onClick={() =>
                 {
                     const identifier = "plus"
                     handleSelectorClick(product.itemNumber, desiredAmount, identifier)}

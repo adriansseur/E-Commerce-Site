@@ -1,0 +1,23 @@
+.header-container {
+    border-bottom: 1px solid;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+
+    #clickables-container {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    #cart,
+    #menu {
+        cursor: pointer;
+    }
+    
+    a {
+        margin: 1em 0;
+        text-decoration: none;
+        color: black;
+    }
+}
