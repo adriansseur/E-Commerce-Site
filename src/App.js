@@ -64,16 +64,16 @@ export default function App() {
                 closeCartMenu={closeCartMenu} />
             
             <Routes >
-                <Route path="/e-commerce-site/" element={<Home componentOpacity={componentOpacity}/>} />
-                <Route path="/about" element={<About componentOpacity={componentOpacity}/>} />
-                <Route path="/products" element={<Products
+                <Route path="e-commerce-site/" element={<Home componentOpacity={componentOpacity}/>} />
+                <Route path="e-commerce-site/about" element={<About componentOpacity={componentOpacity}/>} />
+                <Route path="e-commerce-site/products" element={<Products
                     componentOpacity={componentOpacity}
                     productsItems={productsItems}
                     setProductsItems={setProductsItems} />} />
-                <Route path="/recipes" element={<Recipes componentOpacity={componentOpacity}/>} />
-                <Route path="/newsletter" element={<Newsletter componentOpacity={componentOpacity}/>} />
-                <Route path="/contact" element={<Contact componentOpacity={componentOpacity} />} />
-                <Route path="/checkout" element={<Checkout
+                <Route path="e-commerce-site/recipes" element={<Recipes componentOpacity={componentOpacity}/>} />
+                <Route path="e-commerce-site/newsletter" element={<Newsletter componentOpacity={componentOpacity}/>} />
+                <Route path="e-commerce-site/contact" element={<Contact componentOpacity={componentOpacity} />} />
+                <Route path="e-commerce-site/checkout" element={<Checkout
                     componentOpacity={componentOpacity}
                     productsItems={productsItems}
                     setProductsItems={setProductsItems}
