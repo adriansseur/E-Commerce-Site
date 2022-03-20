@@ -1,0 +1,18 @@
+.recipes-container {
+    .card {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1rem;
+
+        img {
+            display: block;
+            width: 50%;
+            height: 100px;
+            object-fit: cover;
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+}
