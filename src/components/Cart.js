@@ -5,12 +5,17 @@ import AmountSelector from "../subcomponents/AmountSelector"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClose } from '@fortawesome/free-solid-svg-icons'
 
-export default function Cart({isToggled, productsItems, setProductsItems, closeCartMenu}) {
-
-    // Controls whether cart is displayed
-    const style = {
-        display: isToggled.cart ? "initial" : "none"
-    }
+export default function Cart({ isToggled, productsItems, setProductsItems, closeCartMenu, tl }) {
+    
+    // display cart animation
+    const cartContainer = React.useRef(null)
+    React.useEffect(() => {
+        let height = 0
+        if (isToggled.cart) {
+            height = "75vh"
+        }
+        tl.to(cartContainer.current, { maxHeight: height}, "<")
+    }, [isToggled])
 
     // Eliminates product from cart, regardless of amount in selector
     function handleCloseClick(itemNumber) {
@@ -69,7 +74,7 @@ export default function Cart({isToggled, productsItems, setProductsItems, closeC
     }
 
     return (
-        <div className="cart-container" style={style}>
+        <div ref={cartContainer} className="cart-container">
             {cartElements}
         </div>
     )

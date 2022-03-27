@@ -11,6 +11,7 @@ import Newsletter from "./components/Newsletter"
 import Contact from "./components/Contact"
 import Checkout from "./components/Checkout"
 import data from "./productsData"
+import {gsap} from "gsap"
 
 export default function App() {
 
@@ -26,10 +27,10 @@ export default function App() {
     // Source of truth. Controls opacity of components
     const [componentOpacity, setComponentOpacity] = React.useState("1")
 
-    // Displaying products data in console. For testing
+    // Displaying products data  and toggled state in console. For testing
     React.useEffect(() => {
-        console.log(productsItems)
-    }, [productsItems])
+        console.log(productsItems, isToggled)
+    }, [productsItems, isToggled])
 
     // Controlling opacity if menu or cart are open
     React.useEffect(() => {
@@ -48,16 +49,23 @@ export default function App() {
     })
     }
 
+    // animations for menu and cart
+    const tl = gsap.timeline({
+        defaults: {duration: 0.75}
+    })
+
     return (
         <div className="app-container">
             <Header
                 setIsToggled={setIsToggled}
                 closeCartMenu={closeCartMenu} />
             <Menu
+                tl={tl}
                 isToggled={isToggled}
                 setIsToggled={setIsToggled}
                 closeCartMenu={closeCartMenu} />
             <Cart
+                tl={tl}
                 isToggled={isToggled}
                 setProductsItems={setProductsItems}
                 productsItems={productsItems}

@@ -5,6 +5,8 @@
     width: 100%;
     background: white;
     z-index: 1;
+    max-height: 0px;
+    overflow: scroll;
 
     .card {
         display: flex;

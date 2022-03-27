@@ -34,7 +34,7 @@ export default function Checkout({ componentOpacity, productsItems, setProductsI
     // controls events when "place order" is clicked
     // events include emptying cart
     function handlePlaceOrderClick() {
-        const placeOrderBtn = document.querySelector(".place-order")
+        const placeOrderBtn = document.querySelector("#place-order-btn")
         placeOrderBtn.textContent = "Processing..."
         setTimeout(() => {
             placeOrderBtn.textContent = "Success!"

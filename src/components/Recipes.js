@@ -6,7 +6,7 @@ export default function Recipes({ componentOpacity }) {
     
     const recipesElements = data.map(recipe => {
         return (
-            <div className="card">
+            <div key={recipe.key}className="card">
                 <img src={process.env.PUBLIC_URL + recipe.src}></img>
                 <p>{recipe.text}</p>
             </div>

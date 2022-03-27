@@ -7,6 +7,8 @@
     width: 100%;
     background: white;
     z-index: 1;
+    overflow: hidden;
+    max-height: 0px;
 
     a {
         margin: 1em 0;
