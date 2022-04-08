@@ -2,9 +2,14 @@
     opacity: 0;
 }
 
-.home-video {
-    width: 100%;
+.home-video-wrapper {
     position: absolute;
     top: 0;
-    z-index: -100;
+    left: -1rem;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.home-video {
+    width: 100vw;
 }
