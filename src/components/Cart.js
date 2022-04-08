@@ -10,11 +10,11 @@ export default function Cart({ isToggled, productsItems, setProductsItems, close
     // display cart animation
     const cartContainer = React.useRef(null)
     React.useEffect(() => {
-        let height = 0
-        if (isToggled.cart) {
-            height = "75vh"
+        if (isToggled.cart && !isToggled.menu) {
+            tl.to(cartContainer.current, { maxHeight: "100vh" })
+        } else {
+            tl.to(cartContainer.current, { maxHeight: 0})
         }
-        tl.to(cartContainer.current, { maxHeight: height}, "<")
     }, [isToggled])
 
     // Eliminates product from cart, regardless of amount in selector
