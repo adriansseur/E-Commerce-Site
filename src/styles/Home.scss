@@ -5,11 +5,11 @@
 .home-video-wrapper {
     position: absolute;
     top: 0;
-    left: -1rem;
+    left: -10vw;
     z-index: -1;
     overflow: hidden;
 }
 
 .home-video {
-    width: 100vw;
+    width: calc(100vw);
 }

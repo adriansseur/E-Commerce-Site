@@ -23,3 +23,9 @@
         color: black;
     }
 }
+
+@media (max-width: 374px) {
+    #header-products-link {
+        display: none;
+    }
+}
