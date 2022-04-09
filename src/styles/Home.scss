@@ -1,15 +1,133 @@
-.home-title {
-    opacity: 0;
-}
+@import "./index.scss";
 
-.home-video-wrapper {
-    position: absolute;
-    top: 0;
-    left: -10vw;
-    z-index: -1;
-    overflow: hidden;
-}
+.home {
+    &-video-wrapper {
+        position: absolute;
+        top: 0;
+        left: -10vw;
+        z-index: -1;
+        overflow: hidden;
+        height: 100vh;
+        width: 100vw;
 
-.home-video {
-    width: calc(100vw);
+        video {
+            width: 100%;
+            min-height: 100%;
+        }
+    }
+    
+    &-fresh-honey {
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        
+        &-title {
+            margin-bottom: 0;
+        }
+        
+        .subtitle {
+            margin: 0;
+        }
+
+        .bottom {
+            margin: auto 0 10vw 0;
+            background: rgba(255, 255, 255, 0.669);
+            padding: 1rem
+        }
+
+        .buttons-container {
+            display: flex;
+            justify-content: space-between;
+
+            button {
+                @include buttonStyle;
+            }
+        }
+    }
+
+    &-blossoming-flavor {
+        .title {
+            margin-bottom: 0;
+        }
+        
+        .carousel-container {
+            position: relative;
+            height: 50vh;
+        }
+        
+        img {
+            width: 50%;
+            position: absolute;
+        }
+    
+        @for $i from 1 through 3 {
+            img:nth-child(#{$i}) {
+                left: #{$i*2}rem;
+                top: #{$i*2}rem;
+            }
+        }
+    
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+    
+            span {
+                margin: 0 0.25rem;
+                font-size: 3rem;
+            }
+        }
+
+        button {
+            @include buttonStyle;
+            margin: auto;
+        }
+    }
+    &-our-process {
+        margin-top: 10vw;
+        padding: 10vw;
+        width: 100vw;
+        position: relative;
+        left: -10vw;
+        background: #e7e9e9;
+
+        .title {
+            margin-top: 0;
+        }
+
+        .img-container {
+            display: grid;
+            grid-template: auto auto / auto auto;
+            img {
+                width: 100%;
+            }
+    
+            #worker-table {
+                margin: auto 0;
+                grid-row: 1 / -1;
+            }
+    
+            #worker-vial {
+                grid-column: 2;
+            }
+        }
+    }
+
+    &-family-business {
+        padding-bottom: 10vw;
+
+        .portrait-wrapper {
+            img {
+                width: 100%;
+                height: 50vw;
+                object-fit: cover;
+            }
+        }
+
+        button {
+            @include buttonStyle;
+            margin: 1em auto;
+        }
+    }
+    
+    
 }

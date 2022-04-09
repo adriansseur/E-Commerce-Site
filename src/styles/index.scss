@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0 10%;
     font-family: 'Poppins', sans-serif;
@@ -5,4 +9,12 @@ body {
 
 .app-container {
     position: relative;
+}
+
+@mixin buttonStyle {
+    display: block;
+    padding: 0.75em 1em;
+    border: none;
+    background: rgb(242, 167, 6);
+    color: rgb(0, 0, 0);
 }
