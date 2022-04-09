@@ -1,14 +1,21 @@
 {
   "files": {
-    "main.css": "/e-commerce-site/static/css/main.4863e8e6.css",
-    "main.js": "/e-commerce-site/static/js/main.34a70bfb.js",
+    "main.css": "/e-commerce-site/static/css/main.2c1848c3.css",
+    "main.js": "/e-commerce-site/static/js/main.bce6e04c.js",
     "static/media/pexels_video_honey.mp4": "/e-commerce-site/static/media/pexels_video_honey.82a7b6625bb8f624d614.mp4",
+    "static/media/nathan-dumlao-4_mJ1TbMK8A-unsplash.jpg": "/e-commerce-site/static/media/nathan-dumlao-4_mJ1TbMK8A-unsplash.e805a12f6770110f95d2.jpg",
+    "static/media/bianca-ackermann-rCfi4ZCcgS4-unsplash.jpg": "/e-commerce-site/static/media/bianca-ackermann-rCfi4ZCcgS4-unsplash.cf58a9d9168ee5477c87.jpg",
+    "static/media/bee-naturalles-IRM9qgZdlW0-unsplash.jpg": "/e-commerce-site/static/media/bee-naturalles-IRM9qgZdlW0-unsplash.d85719b69ad7b58c4a77.jpg",
+    "static/media/andy-holmes-wdz-dez94RQ-unsplash.jpg": "/e-commerce-site/static/media/andy-holmes-wdz-dez94RQ-unsplash.3fed859f50caf876c996.jpg",
+    "static/media/janosch-diggelmann-CQXFPMe1smM-unsplash.jpg": "/e-commerce-site/static/media/janosch-diggelmann-CQXFPMe1smM-unsplash.ba838c76e8092980e37a.jpg",
+    "static/media/dejan-zakic-s58GuIVFaaM-unsplash.jpg": "/e-commerce-site/static/media/dejan-zakic-s58GuIVFaaM-unsplash.190e0a4b8dd37ee22bdf.jpg",
+    "static/media/hiveboxx-65icrs88YYs-unsplash.jpg": "/e-commerce-site/static/media/hiveboxx-65icrs88YYs-unsplash.b499b689700ef4e07d79.jpg",
     "index.html": "/e-commerce-site/index.html",
-    "main.4863e8e6.css.map": "/e-commerce-site/static/css/main.4863e8e6.css.map",
-    "main.34a70bfb.js.map": "/e-commerce-site/static/js/main.34a70bfb.js.map"
+    "main.2c1848c3.css.map": "/e-commerce-site/static/css/main.2c1848c3.css.map",
+    "main.bce6e04c.js.map": "/e-commerce-site/static/js/main.bce6e04c.js.map"
   },
   "entrypoints": [
-    "static/css/main.4863e8e6.css",
-    "static/js/main.34a70bfb.js"
+    "static/css/main.2c1848c3.css",
+    "static/js/main.bce6e04c.js"
   ]
 }
