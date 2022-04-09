@@ -6,12 +6,14 @@
 
     .sign {
         cursor: pointer;
+        border-radius: 50%;
     }
-
+    
     .number-container {
+        background: rgb(255, 218, 143);
         width: 30px;
         height: 30px;
-        border: 1px solid;
+        border-radius: 5px;
         display: flex;
         justify-content: center;
         align-items: center;
