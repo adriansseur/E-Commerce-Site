@@ -21,14 +21,14 @@ export default function Header({setIsToggled, closeCartMenu}) {
         <div className="header-container">
             <Link
                 id="logo"
-                to="e-commerce-site/"
+                to="/"
                 onClick={closeCartMenu}
             >Weston Farms
             </Link>
             <div id="clickables-container">
                 <Link
                     id="header-products-link"
-                    to="e-commerce-site/products"
+                    to="/products"
                     onClick={closeCartMenu}
                 >Products
                 </Link>

@@ -43,7 +43,7 @@ export default function Checkout({ componentOpacity, productsItems, setProductsI
             placeOrderBtn.textContent = "Redirecting..."
         }, 3000)
         setTimeout(() => {
-            navigate("/e-commerce-site/")
+            navigate("/")
             setProductsItems(prev => {
                 const newState = prev.map(product => {
                     const modifiedProduct = {

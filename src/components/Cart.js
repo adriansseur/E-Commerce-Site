@@ -65,8 +65,8 @@ export default function Cart({ isToggled, productsItems, setProductsItems, close
     } else {
         cartElements.push(
             <Link
-                key="checkout button"
-                to="e-commerce-site/checkout"
+                key="checkout-button"
+                to="/checkout"
                 id="proceed-to-checkout-link"
                 onClick={closeCartMenu}
             >Proceed to Checkout</Link>

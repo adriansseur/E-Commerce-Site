@@ -8,7 +8,6 @@ export default function Menu({isToggled, setIsToggled, closeCartMenu, tl}) {
     const menuContainer = React.useRef(null)
     React.useEffect(() => {
         if (isToggled.menu && !isToggled.cart) {
-            console.log("menu timeout set")
             // delays in order to allow cart to close first
             setTimeout(() => {
                 tl.to(menuContainer.current, { maxHeight: "100vh" })
@@ -20,12 +19,12 @@ export default function Menu({isToggled, setIsToggled, closeCartMenu, tl}) {
 
     return (
         <div ref={menuContainer} className="menu-container">
-            <Link to="e-commerce-site/" onClick={closeCartMenu}>Home</Link>
-            <Link to="e-commerce-site/about" onClick={closeCartMenu}>About</Link>
-            <Link to="e-commerce-site/products" onClick={closeCartMenu}>Products</Link>
-            <Link to="e-commerce-site/recipes" onClick={closeCartMenu}>Recipes</Link>
-            <Link to="e-commerce-site/newsletter" onClick={closeCartMenu}>Newsletter</Link>
-            <Link to="e-commerce-site/contact" onClick={closeCartMenu}>Contact</Link>
+            <Link to="/" onClick={closeCartMenu}>Home</Link>
+            <Link to="/about" onClick={closeCartMenu}>About</Link>
+            <Link to="/products" onClick={closeCartMenu}>Products</Link>
+            <Link to="/recipes" onClick={closeCartMenu}>Recipes</Link>
+            <Link to="/newsletter" onClick={closeCartMenu}>Newsletter</Link>
+            <Link to="/contact" onClick={closeCartMenu}>Contact</Link>
         </div>
     )
 }
