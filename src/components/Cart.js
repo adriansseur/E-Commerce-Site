@@ -5,15 +5,18 @@ import AmountSelector from "../subcomponents/AmountSelector"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClose } from '@fortawesome/free-solid-svg-icons'
 
-export default function Cart({ isToggled, productsItems, setProductsItems, closeCartMenu, tl }) {
+// export default function Cart({ isToggled, productsItems, setProductsItems, closeCartMenu, tl }) {
+export default function Cart({ isToggled, productsItems, setProductsItems, closeCartMenu }) {
     
     // display cart animation
     const cartContainer = React.useRef(null)
     React.useEffect(() => {
         if (isToggled.cart && !isToggled.menu) {
-            tl.to(cartContainer.current, { maxHeight: "100vh" })
+            // tl.to(cartContainer.current, { maxHeight: "100vh" })
+            cartContainer.current.style.maxHeight = "100vh"
         } else {
-            tl.to(cartContainer.current, { maxHeight: 0})
+            // tl.to(cartContainer.current, { maxHeight: 0})
+            cartContainer.current.style.maxHeight = "0"
         }
     }, [isToggled])
 
@@ -75,6 +78,7 @@ export default function Cart({ isToggled, productsItems, setProductsItems, close
 
     return (
         <div ref={cartContainer} className="cart-container">
+        {/* <div className="cart-container"> */}
             {cartElements}
         </div>
     )

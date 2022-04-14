@@ -2,23 +2,27 @@ import React from "react"
 import "../styles/Menu.scss"
 import { Link } from "react-router-dom"
 
-export default function Menu({isToggled, setIsToggled, closeCartMenu, tl}) {
+// export default function Menu({ isToggled, setIsToggled, closeCartMenu, tl }) {
+export default function Menu({ isToggled, setIsToggled, closeCartMenu }) {
 
     // display menu animation
     const menuContainer = React.useRef(null)
     React.useEffect(() => {
         if (isToggled.menu && !isToggled.cart) {
             // delays in order to allow cart to close first
-            setTimeout(() => {
-                tl.to(menuContainer.current, { maxHeight: "100vh" })
-            }, 0)
+            // setTimeout(() => {
+            //     tl.to(menuContainer.current, { maxHeight: "100vh" })
+            // }, 0)
+            menuContainer.current.style.maxHeight = "100vh"
         } else {
-            tl.to(menuContainer.current, { maxHeight: 0})
+            // tl.to(menuContainer.current, { maxHeight: 0})
+            menuContainer.current.style.maxHeight = "0"
         }
     }, [isToggled])
 
     return (
         <div ref={menuContainer} className="menu-container">
+        {/* <div className="menu-container"> */}
             <Link to="/" onClick={closeCartMenu}>Home</Link>
             <Link to="/about" onClick={closeCartMenu}>About</Link>
             <Link to="/products" onClick={closeCartMenu}>Products</Link>

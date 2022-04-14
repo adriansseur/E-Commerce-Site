@@ -50,9 +50,9 @@ export default function App() {
     }
 
     // animations for menu and cart
-    const tl = gsap.timeline({
-        defaults: {duration: 0.75}
-    })
+    // const tl = gsap.timeline({
+    //     defaults: {duration: 0.75}
+    // })
 
     return (
         <div className="app-container">
@@ -60,12 +60,12 @@ export default function App() {
                 setIsToggled={setIsToggled}
                 closeCartMenu={closeCartMenu} />
             <Menu
-                tl={tl}
+                // tl={tl}
                 isToggled={isToggled}
                 setIsToggled={setIsToggled}
                 closeCartMenu={closeCartMenu} />
             <Cart
-                tl={tl}
+                // tl={tl}
                 isToggled={isToggled}
                 setProductsItems={setProductsItems}
                 productsItems={productsItems}
