@@ -12,10 +12,8 @@ export default function Cart({ isToggled, productsItems, setProductsItems, close
     const cartContainer = React.useRef(null)
     React.useEffect(() => {
         if (isToggled.cart && !isToggled.menu) {
-            // tl.to(cartContainer.current, { maxHeight: "100vh" })
             cartContainer.current.style.maxHeight = "100vh"
         } else {
-            // tl.to(cartContainer.current, { maxHeight: 0})
             cartContainer.current.style.maxHeight = "0"
         }
     }, [isToggled])

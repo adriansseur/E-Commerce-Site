@@ -9,13 +9,8 @@ export default function Menu({ isToggled, setIsToggled, closeCartMenu }) {
     const menuContainer = React.useRef(null)
     React.useEffect(() => {
         if (isToggled.menu && !isToggled.cart) {
-            // delays in order to allow cart to close first
-            // setTimeout(() => {
-            //     tl.to(menuContainer.current, { maxHeight: "100vh" })
-            // }, 0)
             menuContainer.current.style.maxHeight = "100vh"
         } else {
-            // tl.to(menuContainer.current, { maxHeight: 0})
             menuContainer.current.style.maxHeight = "0"
         }
     }, [isToggled])
