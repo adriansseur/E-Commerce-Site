@@ -53,17 +53,19 @@
         
         .carousel-container {
             position: relative;
-            height: 50vh;
+            padding-bottom: 100%;
         }
         
         img {
             width: 50%;
+            height: calc(100% - 8rem);
+            object-fit: cover;
             position: absolute;
         }
     
         @for $i from 1 through 3 {
             img:nth-child(#{$i}) {
-                left: #{$i*2}rem;
+                left: #{$i*12.5%};
                 top: #{$i*2}rem;
             }
         }
@@ -131,4 +133,17 @@
     }
     
     
+}
+
+@media (min-width: 768px) {
+    .home {
+        &-blossoming-flavor {
+            .carousel-container {
+                padding-bottom: 0;
+                width: 600px;
+                height: 600px;
+                margin: auto;
+            }
+        }
+    }
 }
