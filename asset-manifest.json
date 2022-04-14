@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/e-commerce-site/static/css/main.74c769b2.css",
+    "main.css": "/e-commerce-site/static/css/main.fd86d990.css",
     "main.js": "/e-commerce-site/static/js/main.c19159ae.js",
     "static/media/pexels_video_honey.mp4": "/e-commerce-site/static/media/pexels_video_honey.82a7b6625bb8f624d614.mp4",
     "static/media/nathan-dumlao-4_mJ1TbMK8A-unsplash.jpg": "/e-commerce-site/static/media/nathan-dumlao-4_mJ1TbMK8A-unsplash.e805a12f6770110f95d2.jpg",
@@ -11,11 +11,11 @@
     "static/media/dejan-zakic-s58GuIVFaaM-unsplash.jpg": "/e-commerce-site/static/media/dejan-zakic-s58GuIVFaaM-unsplash.190e0a4b8dd37ee22bdf.jpg",
     "static/media/hiveboxx-65icrs88YYs-unsplash.jpg": "/e-commerce-site/static/media/hiveboxx-65icrs88YYs-unsplash.b499b689700ef4e07d79.jpg",
     "index.html": "/e-commerce-site/index.html",
-    "main.74c769b2.css.map": "/e-commerce-site/static/css/main.74c769b2.css.map",
+    "main.fd86d990.css.map": "/e-commerce-site/static/css/main.fd86d990.css.map",
     "main.c19159ae.js.map": "/e-commerce-site/static/js/main.c19159ae.js.map"
   },
   "entrypoints": [
-    "static/css/main.74c769b2.css",
+    "static/css/main.fd86d990.css",
     "static/js/main.c19159ae.js"
   ]
 }
