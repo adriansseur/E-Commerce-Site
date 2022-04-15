@@ -2,13 +2,20 @@
     box-sizing: border-box;
 }
 
+:root {
+    --app-max-width: 1300px;
+}
+
 body {
     margin: 0 10%;
     font-family: 'Poppins', sans-serif;
 }
 
 .app-container {
-    position: relative;
+    // position: relative;
+    overflow: hidden;
+    max-width: var(--app-max-width);
+    margin: auto;
 }
 
 @mixin buttonStyle {
