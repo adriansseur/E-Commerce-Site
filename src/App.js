@@ -57,6 +57,7 @@ export default function App() {
     return (
         <div className="app-container">
             <Header
+                productsItems={productsItems}
                 setIsToggled={setIsToggled}
                 closeCartMenu={closeCartMenu} />
             <Menu

@@ -11,6 +11,31 @@
         align-items: center;
         gap: 1rem;
     }
+
+    .cart-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .cart-counter {
+        margin: 0;
+        padding: 0;
+        min-width: 20px;
+        min-height: 20px;
+        border-radius: 50%;
+        position: absolute;
+        background: red;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: 27%;
+        z-index: 300;
+        font-size: 0.7rem;
+    }
     
     #cart,
     #menu {
