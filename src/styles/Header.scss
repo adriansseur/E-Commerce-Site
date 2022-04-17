@@ -68,6 +68,7 @@
 
             .cart-counter {
                 margin: 0;
+                padding: 0;
                 background: red;
                 color: white;
                 width: 4px;
@@ -80,7 +81,8 @@
                 position: absolute;
                 left: 50%;
                 top: 25%;
-                font-size: 0.2rem;
+                font-size: 3px;
+                line-height: 0;
             }
         }
     }   
