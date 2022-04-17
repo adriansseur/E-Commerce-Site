@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClose } from '@fortawesome/free-solid-svg-icons'
 
 // export default function Cart({ isToggled, productsItems, setProductsItems, closeCartMenu, tl }) {
-export default function Cart({ isToggled, productsItems, setProductsItems, closeCartMenu }) {
+export default function Cart({ isToggled, productsItems, setProductsItems, closeCartMenu, setProceededToCheckout }) {
     
     // display cart animation
     const cartContainer = React.useRef(null)
@@ -69,7 +69,11 @@ export default function Cart({ isToggled, productsItems, setProductsItems, close
                 key="checkout-button"
                 to="/checkout"
                 id="proceed-to-checkout-link"
-                onClick={closeCartMenu}
+                onClick={() => {
+                    // closeCartMenu
+                    setProceededToCheckout(true)
+                }
+                }
             >Proceed to Checkout</Link>
         )
     }

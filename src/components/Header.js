@@ -3,7 +3,7 @@ import "../styles/Header.scss"
 import { Link } from "react-router-dom"
 import { gsap } from "gsap"
 
-export default function Header({isToggled, setIsToggled, closeCartMenu, productsItems}) {
+export default function Header({isToggled, setIsToggled, closeCartMenu, productsItems, proceededToCheckout, setProceededToCheckout}) {
 
     const cart = React.useRef()
     const c = gsap.utils.selector(cart)
@@ -102,6 +102,11 @@ export default function Header({isToggled, setIsToggled, closeCartMenu, products
         }
     }
 
+    // if proceed checkout and cart was open, close cart
+    if (proceededToCheckout === true && isToggled.cart === true) {
+        toggleCart()
+    }
+
     return (
         <div className="header-container">
             <Link
@@ -131,7 +136,10 @@ export default function Header({isToggled, setIsToggled, closeCartMenu, products
                     }}
                 >Products
                 </Link>
-                <div className="cart-wrapper" onClick={handleToggleCart}>
+                <div className="cart-wrapper" onClick={() => {
+                    setProceededToCheckout(false)
+                    handleToggleCart()
+                }}>
                     <div ref={shapes} className="shapes-wrapper">
                         <div className="circle"></div>
                         <div className="triangle"></div>

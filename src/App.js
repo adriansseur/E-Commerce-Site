@@ -49,10 +49,8 @@ export default function App() {
     })
     }
 
-    // animations for menu and cart
-    // const tl = gsap.timeline({
-    //     defaults: {duration: 0.75}
-    // })
+    // Watching for proceeded to checkout
+    const [proceededToCheckout, setProceededToCheckout] = React.useState(false)
 
     return (
         <div className="app-container">
@@ -60,17 +58,21 @@ export default function App() {
                 isToggled={isToggled}
                 productsItems={productsItems}
                 setIsToggled={setIsToggled}
-                closeCartMenu={closeCartMenu} />
+                closeCartMenu={closeCartMenu}
+                proceededToCheckout={proceededToCheckout}
+                setProceededToCheckout={setProceededToCheckout} />
             <Menu
                 // tl={tl}
                 isToggled={isToggled}
-                setIsToggled={setIsToggled} />
+                setIsToggled={setIsToggled}
+                closeCartMenu={closeCartMenu} />
             <Cart
                 // tl={tl}
                 isToggled={isToggled}
                 setProductsItems={setProductsItems}
                 productsItems={productsItems}
-                closeCartMenu={closeCartMenu} />
+                closeCartMenu={closeCartMenu}
+                setProceededToCheckout={setProceededToCheckout} />
             
             <Routes >
                 <Route path="/" element={<Home componentOpacity={componentOpacity}/>} />
