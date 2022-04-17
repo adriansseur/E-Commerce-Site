@@ -107,7 +107,14 @@ export default function Header({isToggled, setIsToggled, closeCartMenu, products
             <Link
                 id="logo"
                 to="/"
-                onClick={closeCartMenu}
+                onClick={() => {
+                    if (isToggled.cart === true) {
+                        toggleCart()
+                    } else if (isToggled.menu === true) {
+                        setIsToggled(prevState => 
+                            ({menu: false, cart: prevState.cart}))
+                    }
+                }}
             >Weston Farms
             </Link>
             <div id="clickables-container">
