@@ -114,7 +114,14 @@ export default function Header({isToggled, setIsToggled, closeCartMenu, products
                 <Link
                     id="header-products-link"
                     to="/products"
-                    onClick={closeCartMenu}
+                    onClick={() => {
+                        if (isToggled.cart === true) {
+                            toggleCart()
+                        } else if (isToggled.menu === true) {
+                            setIsToggled(prevState => 
+                                ({menu: false, cart: prevState.cart}))
+                        }
+                    }}
                 >Products
                 </Link>
                 <div className="cart-wrapper" onClick={handleToggleCart}>

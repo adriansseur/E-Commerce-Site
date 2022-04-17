@@ -64,8 +64,7 @@ export default function App() {
             <Menu
                 // tl={tl}
                 isToggled={isToggled}
-                setIsToggled={setIsToggled}
-                closeCartMenu={closeCartMenu} />
+                setIsToggled={setIsToggled} />
             <Cart
                 // tl={tl}
                 isToggled={isToggled}
